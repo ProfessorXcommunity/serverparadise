@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 app.use(
   cors({
     origin: "https://serverparadise.onrender.com", // Your frontend URL
