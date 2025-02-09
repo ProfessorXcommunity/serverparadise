@@ -3,11 +3,19 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const nodemailer = require("nodemailer");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
-
+app.use(
+  cors({
+    origin: "https://serverparadise.onrender.com", // Your frontend URL
+    methods: ["GET", "POST"], // Allowed HTTP methods
+    allowedHeaders: ["Content-Type"], // Allowed headers
+  })
+);
 //nodemailer--transporter
 const transporter = nodemailer.createTransport({
   secure: false,
