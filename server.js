@@ -94,7 +94,6 @@ const contactSchema = new mongoose.Schema({
   service: {
     type: String,
     required: true,
-    enum: ["Video Editing", "Website Development", "Learn Courses"],
   },
   createdAt: {
     type: Date,
