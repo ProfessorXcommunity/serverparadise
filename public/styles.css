@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:wght@500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+}
+.logo {
+  font-family: "Cookie", serif;
+  font-size: x-large;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#head-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 auto auto;
+}
+/* Navbar */
+#navbar {
+  background: linear-gradient(to right, #000000, #6200ee);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 20px;
+}
+
+#navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+/* Home */
+#home {
+  background: linear-gradient(to right, #000000, #6200ee);
+  text-align: left;
+  padding: 100px 0;
+  height: 100vh;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Products */
+#products {
+  position: relative;
+  z-index: 1;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.price {
+  padding: 12px;
+  font-size: 30px;
+}
+
+.product-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* About */
+#about {
+  background: linear-gradient(to left, #000000, #6200ee);
+}
+
+/* Contact */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+#services {
+  color: grey;
+}
+
+/* Buttons */
+.button,
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3700b3;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  /* animation: fadeIn 1s forwards; */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  top: 5px;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  #navbar .container {
+    flex-direction: column;
+  }
+
+  #navbar ul {
+    margin-top: 20px;
+  }
+
+  #navbar ul li {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  #head-img {
+    display: none;
+  }
+}
